@@ -1,0 +1,63 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Garante que o título fique no topo */
+}
+
+/* Título centralizado no topo da página */
+.site-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #912a2a;
+    text-align: center;
+    margin-top: 50px;  /* Distância do topo da página */
+    margin-bottom: 20px; /* Distância entre o título e o formulário */
+}
+
+/* Estilos do container de login */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;  /* Limita o tamanho máximo do container */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0c0c0c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container button:hover {
+    background-color: #090a09;
+}
