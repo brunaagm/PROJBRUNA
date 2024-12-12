@@ -1,42 +1,19 @@
-from flask import flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
-
-def init_db(app):
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:1234@localhost/novo'  # Pode ser MySQL, PostgreSQL etc.
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    
-    with app.app_context():
-        db.init_app(app)
-        db.create_all()
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
+app.secret_key = 'sua_chave_secreta'
 
-
-USUARIOS = {
-    "usuario": "senhabrunalinda"
-}
-
-@app.route('/', methods=['GET', 'POST'])
-
+@app.route('/')
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        
-       
-        if username in USUARIOS and USUARIOS[username] == password:
-            return redirect(url_for('dashboard'))
-        else:
-            return render_template('login.html', error="Usuário ou senha inválidos.")
-    
-    return render_template('index.html')
+    return render_template('login.html')
 
-@app.route('/dashboard')
-def dashboard():
-    return "Bem-vindo!"
+@app.route('/registrar', methods=['GET', 'POST'])
+def registrar():
+    if request.method == 'POST':
+        song = request.form.get('song')
+        flash(f'Música "{song}" registrada com sucesso!', 'success')
+        return redirect(url_for('registrar'))
+    return render_template('registrar.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
