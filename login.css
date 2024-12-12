@@ -1,5 +1,11 @@
 /* Estilos gerais */
 body {
+    
+    background-image: url('https://mrwallpaper.com/images/hd/tyler-the-creator-black-and-white-qhjnizkqey4mdq1g.jpg');
+    background-size: cover;
+     background-position: center;
+    height: 100vh; /* Garante que a imagem de fundo ocupe toda a altura da página */
+    margin: 0; 
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -14,7 +20,7 @@ body {
 .site-title {
     font-size: 48px;
     font-weight: bold;
-    color: #912a2a;
+    color: #b30000;
     text-align: center;
     margin-top: 50px;  /* Distância do topo da página */
     margin-bottom: 20px; /* Distância entre o título e o formulário */
@@ -50,7 +56,7 @@ body {
 .container button {
     width: 100%;
     padding: 10px;
-    background-color: #0c0c0c;
+    background-color: #691010;
     border: none;
     color: white;
     font-size: 16px;
@@ -60,4 +66,21 @@ body {
 
 .container button:hover {
     background-color: #090a09;
+}
+
+/* Estiliza o parágrafo */
+p {
+    color: #f1eeee; /* Cor da frase, substitua pelo código de cor desejado */
+    font-size: 16px; /* Tamanho do texto (opcional) */
+}
+
+/* Estiliza o link */
+p a {
+    color: #007BFF; /* Cor do link, substitua pelo código de cor desejado */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+p a:hover {
+    color: #a53232; /* Cor do link ao passar o mouse (opcional) */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
