@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>VIPER</title>
+</head>
+<body>
+    <!-- O título foi movido para fora do container -->
+    <h1 class="site-title">VIPER</h1>
+    
+    <div class="container">
+        <h2>Login</h2>
+        <form method="POST" action="{{ url_for('registrar') }}">
+            <input type="text" name="usuario" placeholder="ex@gmail.com" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
