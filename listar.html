@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>VIPER - Músicas Cadastradas</title>
+</head>
+<body>
+    <h1 class="site-title">VIPER</h1>
+    <div class="container">
+        <h2>Músicas Cadastradas</h2>
+        <ul>
+            {% for song in songs %}
+                <li>{{ song.name }}</li>
+            {% else %}
+                <li>Não há músicas cadastradas.</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <p><a href="{{ url_for('registrar') }}">Voltar para registrar uma nova música</a></p>
+</body>
+</html>
