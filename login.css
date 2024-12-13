@@ -84,3 +84,9 @@ p a:hover {
     color: #a53232; /* Cor do link ao passar o mouse (opcional) */
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
+
+/* Define a cor da frase "Voltar para página inicial" */
+.frase-color {
+    color: #FF5733;  /* Exemplo de cor laranja */
+}
+
