@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
     <title>VIPER</title>
 </head>
-
 <body>
     <h1 class="site-title">VIPER</h1>
     <div class="container">
         <h2>Registrar Músicas</h2>
         <form method="POST">
-            <label> </label>
-            <input type="text" placeholder="Digite o nome da música" required>
-            <br>
-            <br>
+            <input type="text" name="song" placeholder="Digite o nome da música" required>
+            <br><br>
             <button type="submit">Registrar</button>
         </form>
-    </div>
-     <p>Voltar para página inicial? <a href="{{ url_for('login') }}">Login</a></p>
 
+        <!-- Exibir as músicas cadastradas -->
+        <h3>Músicas Cadastradas:</h3>
+        <ul>
+            {% for song in songs %}
+                <li>{{ song.name }}</li>
+            {% else %}
+                <li>Não há músicas cadastradas.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p class="frase-color">Voltar para página inicial? 
+        <a href="{{ url_for('login') }}">Login</a>
+     </p>
+     
+     
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
     <ul>
@@ -32,5 +42,4 @@
     {% endif %}
     {% endwith %}
 </body>
-
 </html>
