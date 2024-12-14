@@ -37,7 +37,7 @@
         <h2>Músicas Cadastradas</h2>
         <ul>
             {% for song in songs %}
-                <li>{{ song.name }} - {{ song.cantor }} - <a href="{{ url_for('excluir_musica', id=song.id) }}">Remover</a></li>
+                <li>{{ song.nome }} - {{ song.cantor }} - <a href="{{ url_for('excluir_musica', id=song.id) }}">Remover</a></li>
             {% endfor %}
         </ul>
 
