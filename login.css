@@ -18,9 +18,10 @@ body {
 
 /* Título centralizado no topo da página */
 .site-title {
-    font-size: 48px;
+    font-style: oblique;
+    font-size: 60px;
     font-weight: bold;
-    color: #b30000;
+    color: #a70505;
     text-align: center;
     margin-top: 50px;  /* Distância do topo da página */
     margin-bottom: 20px; /* Distância entre o título e o formulário */
@@ -87,6 +88,32 @@ p a:hover {
 
 /* Define a cor da frase "Voltar para página inicial" */
 .frase-color {
-    color: #FF5733;  /* Exemplo de cor laranja */
+    color: #070707;  /* Exemplo de cor laranja */
 }
 
+/* Definindo estilos para as mensagens flash */
+ul {
+    list-style-type: none;  /* Remove os pontos das listas */
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para mensagens de sucesso (verde) */
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Estilo para mensagens de erro (vermelho) */
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
