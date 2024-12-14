@@ -9,37 +9,41 @@
 <body>
     <h1 class="site-title">VIPER</h1>
     <div class="container">
-        <h2>Registrar Músicas</h2>
+        <h2>CRIE SUA PLAYLIST</h2>
+
+        <!-- Exibe as mensagens flash no topo da página -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <!-- Formulário de registro de músicas -->
         <form method="POST">
-            <input type="text" name="song" placeholder="Digite o nome da música" required>
+            <label>Nome da música:</label>
+            <input type="text" name="song_name" placeholder="Digite o nome da música" required>
+            <br><br>
+            
+            <label>Nome do cantor:</label>
+            <input type="text" name="cantor_name" placeholder="Digite o nome do cantor" required>
             <br><br>
             <button type="submit">Registrar</button>
         </form>
 
-        <!-- Exibir as músicas cadastradas -->
-        <h3>Músicas Cadastradas:</h3>
+        <h2>Músicas Cadastradas</h2>
         <ul>
             {% for song in songs %}
-                <li>{{ song.name }}</li>
-            {% else %}
-                <li>Não há músicas cadastradas.</li>
+                <li>{{ song.name }} - {{ song.cantor }} - <a href="{{ url_for('excluir_musica', id=song.id) }}">Remover</a></li>
             {% endfor %}
         </ul>
-    </div>
 
-    <p class="frase-color">Voltar para página inicial? 
-        <a href="{{ url_for('login') }}">Login</a>
-     </p>
-     
-     
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <ul>
-        {% for category, message in messages %}
-        <li class="{{ category }}">{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-</body>
+        </body>
 </html>
+
+<p class="frase-color">Voltar para página inicial? 
+    <a href="{{ url_for('login') }}">Login</a>
+ </p>
