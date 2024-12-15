@@ -1,36 +1,35 @@
 /* Estilos gerais */
 body {
-    background-image: url('https://mrwallpaper.com/images/hd/tyler-the-creator-black-and-white-qhjnizkqey4mdq1g.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('https://i.pinimg.com/736x/3f/13/08/3f1308cf2533db8d0e5f6d09afd1e031.jpg');
+    background-size: auto;  /* Mantém a proporção original da imagem */
+    background-position: left top; /* Garante que fique no canto superior esquerdo */
     height: 100vh;
-    margin: 0; 
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
+    margin: 0;
+    font-family: 'Anton';
+    color: #750000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
-
 /* Título */
 .site-title {
-    font-size: 60px;
-    color: #6d0808;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    margin-top: 50px;
-    margin-bottom: 20px;
+    font-size: 130px;
+    color: #640202;
+    text-shadow: 8px 2px 8px rgb(167, 37, 37);
+    margin-top: 20px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
 /* Estilos do container de login */
 .container {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgb(255, 255, 255);
     width: 100%;
     max-width: 400px;
-    padding: 30px;
+    padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(255, 9, 9, 0.2);
     margin-top: 20px;
 }
 
@@ -47,7 +46,7 @@ body {
 
 .container input:focus,
 .container button:focus {
-    border-color: #691010;
+    border-color: #110f13;
     outline: none;
 }
 
@@ -61,6 +60,12 @@ body {
     background-color: #9b1e1e;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+/*style registrar
+
 
 /* Flash Messages */
 ul {
