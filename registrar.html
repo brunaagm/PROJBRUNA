@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registrar.css') }}">
     <title>VIPER</title>
 </head>
 <body>
-    <h1 class="site-title">VIPER</h1>
+    <h1 class="site-title">SUA MELHOR VERSÃO!</h1>
     <div class="container">
-        <h2>Crie Sua Playlist</h2>
+        <h2>CRIE SUA PLAYLIST</h2>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
@@ -42,3 +42,4 @@
     </div>
 </body>
 </html>
+
