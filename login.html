@@ -7,15 +7,26 @@
     <title>VIPER</title>
 </head>
 <body>
-    <!-- O título foi movido para fora do container -->
     <h1 class="site-title">VIPER</h1>
     <div class="container">
         <h2>Login</h2>
-        <form method="POST" action="{{ url_for('registrar') }}">
-            <input type="text" name="usuario" placeholder="ex@gmail.com" required>
-            <input type="password" name="senha" placeholder="Senha" required>
+        <!-- Corrigido para enviar os dados para a rota 'login' -->
+        <form method="POST" action="{{ url_for('login') }}"> 
+            <label for="usuario">Usuário:</label>
+            <input type="email" name="usuario" placeholder="ex@gmail.com" required><br><br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" placeholder="senha123" required><br><br>
             <button type="submit">Entrar</button>
         </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
     </div>
 </body>
 </html>
